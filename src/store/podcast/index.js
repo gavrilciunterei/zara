@@ -1,9 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-export const initialState = {
-  podcasts: [],
-};
-
 export const createPodcastApi = createApi({
   reducerPath: "podcast",
   baseQuery: fetchBaseQuery({ baseUrl: "https://itunes.apple.com" }),
