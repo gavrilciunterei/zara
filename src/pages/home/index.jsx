@@ -2,12 +2,14 @@ import { useGetPodcastsQuery } from "../../store/podcast";
 import Spinner from "../../components/Spinner";
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
+import TotalTab from "../../components/TotalTab";
 const Home = () => {
   const { data, isFetching } = useGetPodcastsQuery();
 
   return (
-    <div className="flex flex-col justify-center ">
-      <div className="flex justify-end mr-5">
+    <div>
+      <div className="flex justify-end mr-5 items-center">
+        <TotalTab text={data?.feed?.entry?.length} />
         <input
           type="text"
           name="name"
