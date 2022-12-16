@@ -3,8 +3,17 @@ import Spinner from "../../components/Spinner";
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import TotalTab from "../../components/TotalTab";
+import useFetchPodcasts from "./hooks/useFetchPodcasts";
+import { searchData } from "../../utils/searchData";
+
 const Home = () => {
-  const { data, isFetching } = useGetPodcastsQuery();
+  const { data, isFetching, podcasts, setPodcasts } = useFetchPodcasts();
+
+  const handleOnSearch = (e) => {
+    const { value } = e.target;
+    const filtredData = searchData(data?.feed?.entry, value);
+    setPodcasts(filtredData);
+  };
 
   return (
     <>
@@ -15,11 +24,12 @@ const Home = () => {
           name="name"
           placeholder="Filter podcasts"
           className="p-3 border rounded-lg w-80"
+          onChange={handleOnSearch}
         />
       </div>
       {isFetching && <Spinner />}
       <CardList>
-        {data?.feed?.entry?.map((podcast) => {
+        {podcasts?.map((podcast) => {
           return (
             <Card
               key={podcast?.id?.attributes["im:id"]}
