@@ -16,6 +16,7 @@ export const Spinner = () => (
         fill="currentFill"
       />
     </svg>
+    <p>(Puede tardar mas de la cuenta por tener el link de cors puesto)</p>
   </div>
 );
 
