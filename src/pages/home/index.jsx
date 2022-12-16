@@ -3,13 +3,11 @@ import Spinner from "../../components/Spinner";
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
 import TotalTab from "../../components/TotalTab";
-import Logo from "../../components/Logo";
 const Home = () => {
   const { data, isFetching } = useGetPodcastsQuery();
 
   return (
     <>
-      <Logo />
       <div className="flex justify-end mr-5 items-center">
         <TotalTab text={data?.feed?.entry?.length} />
         <input
