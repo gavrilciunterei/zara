@@ -8,7 +8,7 @@ export const createPodcastApi = createApi({
       query: () => "/us/rss/toppodcasts/limit=100/genre=1310/json",
     }),
   }),
-  refetchOnMountOrArgChange: 10000,
+  refetchOnMountOrArgChange: 86400,
 });
 
 export const { useGetPodcastsQuery } = createPodcastApi;
