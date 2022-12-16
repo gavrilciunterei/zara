@@ -26,6 +26,7 @@ const Home = () => {
               image={podcast["im:image"][2]?.label}
               title={podcast?.title?.label}
               artist={podcast["im:artist"]?.label}
+              id={podcast?.id?.attributes["im:id"]}
             />
           );
         })}

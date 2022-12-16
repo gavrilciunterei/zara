@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/chapter" element={<Chapter />} />
-            <Route path="/podcast" element={<Podcast />} />
+            <Route path="/podcast/:id" element={<Podcast />} />
           </Routes>
         </Provider>
       </Background>
