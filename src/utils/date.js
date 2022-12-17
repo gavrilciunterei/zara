@@ -1,7 +1,6 @@
 export const formatMillis = (millis) => {
-  const duration = new Date(millis);
-
-  return { minute: duration.getMinutes(), second: duration.getSeconds() };
+  const duration = new Date(millis).toISOString().slice(11, 19);
+  return duration;
 };
 
 export const formatDate = (dateToFormat) => {

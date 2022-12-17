@@ -9,12 +9,13 @@ const TableComponent = ({ episodes }) => {
         <TableHead titles={["Title", "Date", "Duration"]} />
         <tbody>
           {episodes?.map((episode, index) => {
-            const { minute, second } = formatMillis(episode.trackTimeMillis);
+            const duration = formatMillis(episode.trackTimeMillis);
             const date = formatDate(episode.releaseDate);
+
             return (
               <TableRow
                 date={date}
-                duration={`${minute}:${second}`}
+                duration={duration}
                 index={index}
                 trackName={episode.trackName}
                 key={episode.trackId}
