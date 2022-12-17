@@ -25,7 +25,7 @@ npm run start
 
 ## Explicación
 
-He decidido usar RTK Query para almacenar los datos, ya que tiene una opcion que los guarda en la caché durante el tiempo definido `(refetchOnMountOrArgChange)`. No se si en el enunciado se refiere a guardarols así en local storage. 
+He decidido usar RTK Query para almacenar los datos, ya que tiene una opcion que los guarda en la caché durante el tiempo definido `(refetchOnMountOrArgChange)`. No se si en el enunciado se refiere a guardarlos así en local storage. 
 
 El link que salía en los recursos para obtener los episodios no traía la información pedida así que busqué uno que trae 100 episodios, imagino que habrá opciones mejores.
 
