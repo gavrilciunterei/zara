@@ -21,6 +21,7 @@ npm run start
 * React
 * Redux RTK Query
 * React Router Dom
+* Tailwind para los estilos
 
 ## Explicación
 
