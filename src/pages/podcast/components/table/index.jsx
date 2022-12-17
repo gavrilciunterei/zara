@@ -18,6 +18,8 @@ const TableComponent = ({ episodes }) => {
                 index={index}
                 trackName={episode.trackName}
                 key={episode.trackId}
+                episodeId={episode.trackId}
+                podcastId={episode.collectionId}
               />
             );
           })}

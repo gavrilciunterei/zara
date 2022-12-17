@@ -7,9 +7,9 @@ import useFetchEpisodes from "./hooks/useFetchEpisodes";
 import useFetchPodcast from "./hooks/useFetchPodcast";
 
 const Podcast = () => {
-  const { id } = useParams();
-  const { episodes, isFetchingEpisodes } = useFetchEpisodes({ id });
-  const { podcast, isFetchingPodcast } = useFetchPodcast({ id });
+  const { podcastId } = useParams();
+  const { episodes, isFetchingEpisodes } = useFetchEpisodes({ id: podcastId });
+  const { podcast, isFetchingPodcast } = useFetchPodcast({ id: podcastId });
 
   return (
     <div className="flex flex-row p-4  justify-between">
