@@ -1,4 +1,5 @@
 export const formatMillis = (millis) => {
+  if (!millis) return "00:00:00";
   const duration = new Date(millis).toISOString().slice(11, 19);
   return duration;
 };
