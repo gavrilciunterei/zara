@@ -18,7 +18,7 @@ const TableRow = ({
   return (
     <tr className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"} border-b`}>
       <td
-        className="cursor-pointer text-blue-500 flex mr-16 py-4 "
+        className="cursor-pointer text-blue-500 flex mr-16 py-4 ml-4"
         onClick={handleOnClick}
       >
         {trackName}
@@ -27,7 +27,7 @@ const TableRow = ({
         <p className="mr-14">{date}</p>
       </td>
       <td>
-        <p>{duration}</p>
+        <p className="mr-4">{duration}</p>
       </td>
     </tr>
   );
