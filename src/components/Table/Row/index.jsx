@@ -16,11 +16,11 @@ const TableRow = ({
   };
 
   return (
-    <tr
-      className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"} border-b`}
-      onClick={handleOnClick}
-    >
-      <td className="cursor-pointer text-blue-500 flex mr-16 py-4 ">
+    <tr className={`${index % 2 === 0 ? "bg-gray-100" : "bg-white"} border-b`}>
+      <td
+        className="cursor-pointer text-blue-500 flex mr-16 py-4 "
+        onClick={handleOnClick}
+      >
         {trackName}
       </td>
       <td>
