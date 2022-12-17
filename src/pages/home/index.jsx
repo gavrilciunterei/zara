@@ -1,31 +1,18 @@
 import Spinner from "../../components/Spinner";
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
-import TotalTab from "../../components/TotalTab";
 import useFetchPodcasts from "./hooks/useFetchPodcasts";
-import { searchData } from "../../utils/searchData";
+import SearchBar from "./components/search";
 
 const Home = () => {
-  const { data, isFetching, podcasts, setPodcasts } = useFetchPodcasts();
-
-  const handleOnSearch = (e) => {
-    const { value } = e.target;
-    const filtredData = searchData(data?.feed?.entry, value);
-    setPodcasts(filtredData);
-  };
+  const { data, isFetching, podcasts, handleOnSearch } = useFetchPodcasts();
 
   return (
     <>
-      <div className="flex justify-end mr-5 items-center">
-        <TotalTab text={data?.feed?.entry?.length} />
-        <input
-          type="text"
-          name="name"
-          placeholder="Filter podcasts"
-          className="p-3 border rounded-lg w-80"
-          onChange={handleOnSearch}
-        />
-      </div>
+      <SearchBar
+        total={data?.feed?.entry?.length}
+        handleOnSearch={handleOnSearch}
+      />
       {isFetching && <Spinner />}
       <CardList>
         {podcasts?.map((podcast) => {
