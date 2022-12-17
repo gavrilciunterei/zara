@@ -1,4 +1,3 @@
-import { useGetPodcastsQuery } from "../../store/podcast";
 import Spinner from "../../components/Spinner";
 import Card from "../../components/Card";
 import CardList from "../../components/CardList";
